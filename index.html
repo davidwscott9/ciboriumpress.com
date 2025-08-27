@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ciborium Press</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta name="description" content="Ciborium Press — public domain and classic books published on Amazon." />
+
+  <style>
+    :root{
+      --bg:#f3efe6;        /* paper-ish background */
+      --card:#fff7ee;      /* inner card */
+      --accent:#3d2b20;    /* deep brown for type */
+      --muted:#7b6a5f;
+      --button:#7b4b2b;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"EB Garamond", serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(222,210,192,0.45), transparent 12%),
+        linear-gradient(180deg, rgba(255,255,250,0.6), rgba(243,239,230,0.95)),
+        var(--bg);
+      color:var(--accent);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:760px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(36,30,24,0.12);
+      padding:34px;
+      display:flex;
+      gap:22px;
+      align-items:center;
+    }
+
+    .logo{
+      flex:0 0 120px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .logo img{max-width:110px; height:auto; display:block; filter:drop-shadow(0 3px 6px rgba(0,0,0,0.08));}
+
+    .content{flex:1}
+    h1{
+      font-family:"Frank Ruhl Libre", serif;
+      margin:0 0 6px;
+      font-weight:700;
+      font-size:28px;
+      letter-spacing:0.6px;
+      color:var(--accent);
+    }
+    p.lead{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.4;
+    }
+
+    .cta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:12px;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      color:#fff;
+      background:var(--button);
+      font-weight:600;
+      box-shadow:0 6px 12px rgba(123,75,43,0.12);
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn.secondary{background:#c9b69b;color:var(--accent); box-shadow:none; font-weight:600}
+    .btn:hover{transform:translateY(-3px); box-shadow:0 10px 20px rgba(36,30,24,0.14)}
+
+    .meta{font-size:13px;color:var(--muted); margin-top:10px}
+
+    footer{margin-top:16px;font-size:13px;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:640px){
+      .wrap{flex-direction:column; padding:20px}
+      .logo{flex:0 0 96px}
+      h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-labelledby="site-title">
+    <div class="logo" aria-hidden="true">
+      <img src="assets/logo.png" alt="Ciborium Press logo">
+    </div>
+
+    <div class="content">
+      <h1 id="site-title">Ciborium Press</h1>
+      <p class="lead">Vintage, public-domain books carefully prepared for modern readers. Find our editions and author pages on Amazon.</p>
+
+      <div class="cta" role="navigation" aria-label="Links to books and author page">
+        <!-- Replace hrefs below with your actual Amazon book and author links -->
+        <a class="btn" href="https://www.amazon.com/dp/ENTER_BOOK_ASIN" target="_blank" rel="noopener">Our Featured Book</a>
+        <a class="btn secondary" href="https://www.amazon.com/author/YOUR_AUTHOR_ID" target="_blank" rel="noopener">Author Page</a>
+        <a class="btn" href="https://www.amazon.com/s?k=Ciborium+Press" target="_blank" rel="noopener">All Ciborium Press Books</a>
+      </div>
+
+      <div class="meta">New releases: public domain restorations, lightly edited for readability.</div>
+
+      <footer>
+        © <span id="yr"></span> Ciborium Press — Built with GitHub Pages
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
