@@ -16,7 +16,7 @@ jobs:
         run: |
           rm -rf site
           mkdir -p site
-          cp -r index.html assets site/ || true
+          cp -r index.html styles.css assets favicon.ico CNAME site/ || true
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
