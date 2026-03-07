@@ -1,172 +1,313 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ciborium Press</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Ciborium Press — public domain and classic books published on Amazon." />
-  <style>
-    :root{
-      --paper:#f6f0e6;
-      --card:#fffaf2;
-      --ink:#342a22;
-      --muted:#7b6a5f;
-      --cta:#6f3f25;
-      --accent:#bfa07f;
-      --radius:16px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:"EB Garamond", serif;
-      background:
-        radial-gradient(circle at 12% 12%, rgba(210,196,176,0.12), transparent 12%),
-        linear-gradient(180deg, rgba(255,255,252,0.6), rgba(246,240,230,0.95)),
-        var(--paper);
-      color:var(--ink);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px;
-    }
-
-    .card{
-      max-width:760px;
-      width:100%;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,250,244,0.6)),
-        var(--card);
-      border-radius:var(--radius);
-      padding:42px 34px;
-      box-shadow:0 14px 40px rgba(30,24,18,0.12);
-      text-align:center;
-      position:relative;
-      overflow:hidden;
-    }
-
-    /* faint paper texture */
-    .card::before{
-      content:"";
-      position:absolute; inset:0;
-      background-image: repeating-linear-gradient(180deg, rgba(0,0,0,0.01) 0 1px, transparent 1px 28px);
-      pointer-events:none;
-      mix-blend-mode:multiply;
-      opacity:0.14;
-      border-radius:var(--radius);
-    }
-
-    /* lavish top flourish */
-    .flourish-top{width:100%; max-width:640px; margin:0 auto 8px; color:var(--muted); opacity:0.95}
-    .flourish-bottom{width:100%; max-width:600px; margin:18px auto 6px; color:var(--muted); opacity:0.9}
-
-    .logo{display:block; margin:6px auto 14px; max-width:260px}
-    .logo img{width:100%; height:auto; display:block; filter:drop-shadow(0 8px 22px rgba(60,40,20,0.10))}
-
-    .lead{
-      margin:6px 0 22px;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.5;
-    }
-
-    .cta{display:flex;justify-content:center;gap:12px}
-    .btn{
-      display:inline-block;
-      padding:14px 22px;
-      border-radius:12px;
-      text-decoration:none;
-      background:linear-gradient(180deg,var(--cta), #8d5134);
-      color:#fff;
-      font-weight:700;
-      box-shadow:0 12px 26px rgba(111,63,37,0.14);
-      letter-spacing:0.4px;
-      font-family: "Frank Ruhl Libre", serif;
-      font-size:16px;
-    }
-    .btn:hover{transform:translateY(-3px); box-shadow:0 18px 34px rgba(111,63,37,0.18)}
-
-    footer{margin-top:18px;color:var(--muted);font-size:13px}
-
-    /* small corner ornaments repeated faintly */
-    .corner-ornament{
-      position:absolute;
-      width:110px;
-      opacity:0.08;
-      fill:currentColor;
-      color:var(--ink);
-    }
-    .corner-ornament.top-left{left:-10px; top:-6px; transform:rotate(12deg)}
-    .corner-ornament.bottom-right{right:-10px; bottom:-6px; transform:rotate(200deg)}
-
-    @media (max-width:640px){
-      .card{padding:24px}
-      .logo{max-width:200px}
-      .btn{width:100%; text-align:center; padding:12px 16px}
-      .flourish-top, .flourish-bottom{max-width:100%}
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ciborium Press — The greatest works of Christian literature made accessible and beautiful for your bookshelf
+  </title>
+  <meta name="description"
+    content="Ciborium Press publishes beautifully designed editions of the world's greatest literature with vintage-inspired cover art and typesetting. Timeless works, affordably made." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <main class="card" role="main" aria-labelledby="logo">
-    <!-- lavish top SVG flourish -->
-    <svg class="flourish-top" viewBox="0 0 900 120" aria-hidden="true" focusable="false">
-      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" transform="translate(0,20)">
-        <path d="M20 50 C80 0, 160 0, 220 50 C240 70, 300 80, 360 50 C420 20, 500 10, 560 42 C620 74, 700 74, 760 40 C800 16, 860 6, 880 14" opacity="0.95"/>
-        <g transform="translate(90,8)" opacity="0.9">
-          <path d="M40 30 C50 10, 80 6, 110 24 C132 38, 170 48, 200 30" />
-          <circle cx="10" cy="32" r="2.1" />
-          <circle cx="220" cy="26" r="2.1" />
-        </g>
-        <g transform="translate(420,6)" opacity="0.85">
-          <path d="M20 30 C36 10, 70 4, 110 30 C140 50, 180 56, 220 36" />
-          <circle cx="0" cy="30" r="2.2" />
-        </g>
-        <path d="M140 52 C170 80, 220 82, 260 54" opacity="0.7"/>
-      </g>
-    </svg>
 
-    <a href="https://www.amazon.com/s?k=Ciborium+Press" aria-label="All Ciborium Press Books">
-      <figure class="logo" id="logo">
-        <img src="assets/logo.png" alt="Ciborium Press logo">
-      </figure>
-    </a>
-
-    <!-- decorative center flourish block -->
-    <svg class="flourish-bottom" viewBox="0 0 700 80" aria-hidden="true" focusable="false">
-      <defs>
-        <linearGradient id="fg" x1="0" x2="1"><stop offset="0" stop-color="#a78b6f" stop-opacity="0.6"/><stop offset="1" stop-color="#8c6f55" stop-opacity="0.35"/></linearGradient>
-      </defs>
-      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" transform="translate(0,12)">
-        <path d="M40 22 C92 6, 164 6, 216 22 C248 32, 292 36, 336 22 C384 6, 444 6, 496 22 C548 36, 612 38, 660 18" opacity="0.95"/>
-        <g transform="translate(320, -4)">
-          <path d="M0 20 C18 2, 46 -2, 78 12 C100 22, 132 28, 160 12" opacity="0.9"/>
-          <path d="M-48 18 C-24 6, -4 4, 18 14" opacity="0.8"/>
-        </g>
-        <g transform="translate(120, 6)" opacity="0.85">
-          <path d="M0 10 C18 -6, 46 -10, 78 6" />
-        </g>
-      </g>
-    </svg>
-
-    <p class="lead">Vintage, public-domain books carefully prepared for modern readers.</p>
-
-    <div class="cta" role="navigation" aria-label="All books link">
-      <a class="btn" href="https://www.amazon.com/s?k=Ciborium+Press" target="_blank" rel="noopener">All Ciborium Press Books</a>
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/logos/ciborium_press_small.png" alt="Ciborium Press" />
+        <span>Ciborium Press</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+        <li><a href="#mission" onclick="closeMenu()">Our Mission</a></li>
+        <li><a href="#books" onclick="closeMenu()">Featured Books</a></li>
+        <li><a href="#footer" onclick="closeMenu()">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
 
-    <footer>© <span id="yr"></span> Ciborium Press</footer>
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <img src="assets/logos/ciborium_press.png" alt="Ciborium Press" class="hero-logo" />
+      <p class="hero-tagline">Goodness, truth, beauty, made accessible.</p>
+      <p class="hero-desc">
+        We publish beautifully designed editions of the world's greatest Christian literature —
+        crafted with vintage-inspired artistry and offered at an accessible price.
+      </p>
+      <a href="#books" class="hero-cta">
+        Explore Our Collection
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
 
-    <!-- faint corner ornaments for extra flair -->
-    <svg class="corner-ornament top-left" viewBox="0 0 100 100" aria-hidden="true">
-      <path d="M10 80 C30 60, 60 40, 90 20 L78 10 C48 30, 30 46, 12 72 Z"/>
-    </svg>
-    <svg class="corner-ornament bottom-right" viewBox="0 0 100 100" aria-hidden="true">
-      <path d="M90 20 C70 40, 40 60, 10 80 L22 90 C52 70, 70 54, 88 28 Z"/>
-    </svg>
-  </main>
+  <!-- ============================================================
+       GOLD DIVIDER
+       ============================================================ -->
+  <div class="gold-divider">
+    <div class="line"></div>
+    <span class="ornament">❧</span>
+    <div class="line"></div>
+  </div>
 
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <!-- ============================================================
+       MISSION
+       ============================================================ -->
+  <section class="mission" id="mission">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-image-wrapper reveal">
+          <img src="assets/mission-img.png"
+            alt="Beautifully designed paperback books with vintage-inspired covers arranged on a wooden surface" />
+        </div>
+        <div class="mission-text reveal">
+          <h3>Our Mission</h3>
+          <h2>Reviving the Art of the Beautiful Book</h2>
+          <p>
+            At Ciborium Press, our goal is to curate an affordable and accessible library of Christian classics, bound
+            in beauty,
+            that allows the wisdom of the faith to persevere.
+
+          </p>
+          <p>
+            Available through Amazon and major retailers, our collections bring together
+            careful typesetting, elegant cover art, and accessible pricing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GOLD DIVIDER
+       ============================================================ -->
+  <div class="gold-divider">
+    <div class="line"></div>
+    <span class="ornament">❧</span>
+    <div class="line"></div>
+  </div>
+
+  <!-- ============================================================
+       FEATURED BOOKS
+       ============================================================ -->
+  <section class="featured" id="books">
+    <div class="container">
+      <h2 class="section-title reveal">Featured Editions</h2>
+      <p class="section-subtitle reveal">The Chesterton Heritage Collection</p>
+
+      <div class="books-carousel">
+
+        <!-- Book 1 -->
+        <article class="book-card reveal">
+          <div class="book-card-image">
+            <img src="assets/book-1.png" alt="Heretics by G.K. Chesterton — Heritage Collection edition" />
+          </div>
+          <div class="book-card-body">
+            <h3>Heretics</h3>
+            <p class="author">G.K. Chesterton</p>
+            <p>Chesterton's brilliant critique of modern thought, challenging the popular philosophies of his day with
+              characteristic wit and paradox.</p>
+            <div class="amazon-picker">
+              <button class="book-card-btn amazon-picker-trigger" data-asin="1069808415">View on Amazon ▾</button>
+              <div class="amazon-picker-dropdown"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 2 -->
+        <article class="book-card reveal">
+          <div class="book-card-image">
+            <img src="assets/book-2.png" alt="Orthodoxy by G.K. Chesterton — Heritage Collection edition" />
+          </div>
+          <div class="book-card-body">
+            <h3>Orthodoxy</h3>
+            <p class="author">G.K. Chesterton</p>
+            <p>A timeless spiritual autobiography in which Chesterton recounts his joyful discovery that the Christian
+              creed is the best answer to life's deepest questions.</p>
+            <div class="amazon-picker">
+              <button class="book-card-btn amazon-picker-trigger" data-asin="1069808423">View on Amazon ▾</button>
+              <div class="amazon-picker-dropdown"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 3 -->
+        <article class="book-card reveal">
+          <div class="book-card-image">
+            <img src="assets/book-4.png" alt="The Everlasting Man by G.K. Chesterton — Heritage Collection edition" />
+          </div>
+          <div class="book-card-body">
+            <h3>The Everlasting Man</h3>
+            <p class="author">G.K. Chesterton</p>
+            <p>A sweeping survey of human history and the unique claim of Christianity, praised by C.S. Lewis as the
+              book that shaped his conversion.</p>
+            <div class="amazon-picker">
+              <button class="book-card-btn amazon-picker-trigger" data-asin="1069808407">View on Amazon ▾</button>
+              <div class="amazon-picker-dropdown"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- More to Come -->
+        <article class="book-card reveal">
+          <div class="book-card-image"
+            style="display:flex;align-items:center;justify-content:center;background:rgba(201,168,76,0.05);border:1px dashed rgba(201,168,76,0.25);">
+            <p
+              style="font-family:var(--font-display);font-size:1.2rem;color:var(--gold-light);letter-spacing:0.15em;text-transform:uppercase;text-align:center;padding:40px 20px;opacity:0.7;">
+              More Titles<br />Coming Soon</p>
+          </div>
+          <div class="book-card-body">
+            <h3>More to Come</h3>
+            <p class="author">Heritage Collection</p>
+            <p>We're expanding our Heritage Collection with more beautifully designed editions of timeless classics.
+              Stay tuned.</p>
+
+          </div>
+        </article>
+
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <img src="assets/logos/ciborium_press.png" alt="Ciborium Press" class="footer-logo" />
+      <p class="footer-tagline">Goodness, truth, beauty, made accessible.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#mission">Mission</a>
+        <a href="#books">Books</a>
+
+      </div>
+      <p class="footer-copy">&copy; <span id="yr"></span> Ciborium Press. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script>
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile menu
+    const hamburger = document.getElementById('navHamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('open');
+    }
+
+    // Scroll reveal (Intersection Observer)
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+
+    // ── Amazon Country Picker ──────────────────────────────────
+    const amazonStores = [
+      { code: 'US', flag: '🇺🇸', domain: 'amazon.com' },
+      { code: 'UK', flag: '🇬🇧', domain: 'amazon.co.uk' },
+      { code: 'CA', flag: '🇨🇦', domain: 'amazon.ca' },
+      { code: 'AU', flag: '🇦🇺', domain: 'amazon.com.au' },
+      { code: 'DE', flag: '🇩🇪', domain: 'amazon.de' },
+      { code: 'FR', flag: '🇫🇷', domain: 'amazon.fr' },
+      { code: 'ES', flag: '🇪🇸', domain: 'amazon.es' },
+      { code: 'IT', flag: '🇮🇹', domain: 'amazon.it' },
+      { code: 'NL', flag: '🇳🇱', domain: 'amazon.nl' },
+      { code: 'PL', flag: '🇵🇱', domain: 'amazon.pl' },
+      { code: 'SE', flag: '🇸🇪', domain: 'amazon.se' },
+      { code: 'JP', flag: '🇯🇵', domain: 'amazon.co.jp' },
+      { code: 'BE', flag: '🇧🇪', domain: 'amazon.com.be' },
+    ];
+
+    // Populate every dropdown
+    document.querySelectorAll('.amazon-picker-dropdown').forEach(dd => {
+      dd.innerHTML = amazonStores.map(s =>
+        `<a class="amazon-country" data-domain="${s.domain}">${s.flag}<span>${s.code}</span></a>`
+      ).join('');
+    });
+
+    // Toggle dropdown on trigger click
+    document.querySelectorAll('.amazon-picker-trigger').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const picker = btn.closest('.amazon-picker');
+        const wasOpen = picker.classList.contains('open');
+        // Close all other open pickers
+        document.querySelectorAll('.amazon-picker.open').forEach(p => p.classList.remove('open'));
+        if (!wasOpen) picker.classList.add('open');
+      });
+    });
+
+    // Handle country selection
+    document.querySelectorAll('.amazon-picker-dropdown').forEach(dd => {
+      dd.addEventListener('click', e => {
+        const link = e.target.closest('.amazon-country');
+        if (!link) return;
+        e.stopPropagation();
+        const picker = dd.closest('.amazon-picker');
+        const trigger = picker.querySelector('.amazon-picker-trigger');
+        const asin = trigger.dataset.asin;
+        const domain = link.dataset.domain;
+        let url;
+        if (asin === 'search') {
+          const q = trigger.dataset.search || 'Ciborium+Press';
+          url = `https://www.${domain}/s?k=${q}`;
+        } else {
+          url = `https://www.${domain}/dp/${asin}`;
+        }
+        window.open(url, '_blank', 'noopener');
+        picker.classList.remove('open');
+      });
+    });
+
+    // Close dropdowns when clicking elsewhere
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.amazon-picker.open').forEach(p => p.classList.remove('open'));
+    });
+  </script>
+
 </body>
+
 </html>
