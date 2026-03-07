@@ -681,6 +681,99 @@ ul {
 }
 
 /* ============================================================
+   CONTACT
+   ============================================================ */
+.contact {
+  padding: var(--section-pad);
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 580px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 6px;
+  color: var(--ivory);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--ivory-muted);
+  opacity: 0.4;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.04);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-submit {
+  display: inline-block;
+  padding: 16px 48px;
+  background: var(--gold);
+  color: var(--bg-deep);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s var(--ease), transform 0.15s var(--ease);
+}
+
+.contact-submit:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
    AMAZON COUNTRY PICKER
    ============================================================ */
 .amazon-picker {

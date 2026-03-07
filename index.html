@@ -191,6 +191,41 @@
   </section>
 
   <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Get in Touch</h2>
+      <p class="section-subtitle reveal">Feedback, inquiries, or book recommendations — we'd love to hear from you.</p>
+      <form class="contact-form reveal" action="https://formsubmit.co/info@ciboriumpress.com" method="POST">
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="New message from ciboriumpress.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_next" value="https://ciboriumpress.com/#contact">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required placeholder="you@example.com" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="5" required
+            placeholder="Share your thoughts, suggest a title, or just say hello..."></textarea>
+        </div>
+        <button type="submit" class="contact-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
        FOOTER
        ============================================================ -->
   <footer class="site-footer" id="footer">
@@ -201,6 +236,7 @@
         <a href="#hero">Home</a>
         <a href="#mission">Mission</a>
         <a href="#books">Books</a>
+        <a href="#contact">Contact</a>
 
       </div>
       <p class="footer-copy">&copy; <span id="yr"></span> Ciborium Press. All rights reserved.</p>
